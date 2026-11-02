@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLER BANK | Customer Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/accounts.css">
+</head>
+
+<body class="dashboard-page" data-dashboard="customer">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><a class="brand" href="index.html"><span
+            class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button class="sidebar-close"
+          data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="workspace-label"><span>Workspace</span><b>CUSTOMER BANKING</b></div>
+      <nav class="sidebar-nav">
+
+        <a class="nav-item active" href="#overview"><i class="fa-solid fa-grid-2"></i><span>Overview</span></a>
+        <div class="nav-group-label">Banking</div>
+        <a class="nav-item" href="customer/accounts.html"><i class="fa-solid fa-wallet"></i><span>Accounts</span></a>
+        <a class="nav-item" href="customer/payments.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Payments
+            & Transfers</span></a>
+        <a class="nav-item" href="customer/loans.html"><i class="fa-solid fa-house"></i><span>Loans</span></a>
+        <a class="nav-item" href="customer/cards.html"><i class="fa-solid fa-credit-card"></i><span>Cards</span></a>
+        <a class="nav-item" href="customer/beneficiaries.html"><i
+            class="fa-solid fa-users"></i><span>Beneficiaries</span></a>
+        <div class="nav-group-label">Service</div>
+        <a class="nav-item" href="customer/service-requests.html"><i class="fa-solid fa-headset"></i><span>Service
+            Requests</span></a>
+        <a class="nav-item" href="customer/statements.html"><i
+            class="fa-solid fa-file-lines"></i><span>Statements</span></a>
+        <a class="nav-item" href="customer/security.html"><i class="fa-solid fa-user-gear"></i><span>Profile &
+            Security</span></a>
+
+      </nav>
+      <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+        <div><b>Secure session</b><span>MFA protected</span></div>
+      </div>
+      <button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+        <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+            placeholder="Search banking services, customers, transactions..."></div>
+        <div class="header-actions"><button class="icon-btn" data-demo-alert="No new alerts in this demo."
+            aria-label="Notifications"><i class="fa-regular fa-bell"></i><em>3</em></button><button class="icon-btn"
+            data-demo-alert="Help centre will connect to the service API." aria-label="Help"><i
+              class="fa-regular fa-circle-question"></i></button>
+          <div class="user-menu" id="userMenu">
+
+            <button class="user-menu-trigger" id="userMenuTrigger" type="button">
+              <div class="avatar">RK</div>
+
+              <div class="user-info">
+                <b>Rohit</b>
+                <span>Customer</span>
+              </div>
+
+              <i class="fa-solid fa-chevron-down user-chevron"></i>
+            </button>
+
+            <!-- Logout Dropdown -->
+
+            <div class="user-dropdown" id="userDropdown">
+
+              <!-- Profile -->
+              <a href="customer/security.html">
+                <button type="button" id="profileBtn" class="dropdown-item profile-btn">
+
+                  <i class="fa-regular fa-user"></i>
+
+                  <span>Profile</span>
+
+                </button>
+              </a>
+
+              <!-- Logout -->
+              <button type="button" id="logoutBtn" class="dropdown-item logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+              </button>
+
+            </div>
+
+
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-welcome">
+          <div><span class="eyebrow">Thursday · 03 September 2026</span>
+            <h1>Good afternoon, Rohit.</h1>
+            <p>Your finances, accounts and everyday banking — all in one secure view.</p>
+          </div>
+          <div class="status-chip"><span class="status-dot"></span> All core services operational</div>
+        </div>
+
+
+        <section id="overview" class="stats-grid">
+          <article class="metric-card primary">
+            <div class="metric-top"><span>Total relationship balance</span><i class="fa-solid fa-wallet"></i></div>
+            <strong>₹ 8,42,680.50</strong><small><i class="fa-solid fa-arrow-trend-up"></i> +4.8% this month</small>
+            <div class="sparkline">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Available balance</span><i class="fa-solid fa-circle-check"></i></div>
+            <strong>₹ 5,68,420.50</strong><small>Primary savings · •••• 4812</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Loans outstanding</span><i class="fa-solid fa-house"></i></div><strong>₹
+              21,45,000</strong><small>2 active facilities</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Card limit used</span><i class="fa-solid fa-credit-card"></i></div>
+            <strong>18.4%</strong><small>₹ 18,400 of ₹ 1,00,000</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid two-one">
+          <article class="panel" id="accounts">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Your relationship</span>
+                <h2>Accounts</h2>
+              </div><button class="text-btn">View all <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="account-list">
+              <div class="account-row">
+                <div class="account-icon savings"><i class="fa-solid fa-piggy-bank"></i></div>
+                <div class="account-info"><b>Savings Account</b><span>•••• •••• 4812 · Active</span></div><strong>₹
+                  5,68,420.50</strong><button class="more-btn">•••</button>
+              </div>
+              <div class="account-row">
+                <div class="account-icon current"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="account-info"><b>Current Account</b><span>•••• •••• 2209 · Active</span></div><strong>₹
+                  1,24,260.00</strong><button class="more-btn">•••</button>
+              </div>
+              <div class="account-row">
+                <div class="account-icon fd"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="account-info"><b>Fixed Deposit</b><span>FD · Maturity 14 Dec 2026</span></div><strong>₹
+                  1,50,000.00</strong><button class="more-btn">•••</button>
+              </div>
+            </div>
+          </article>
+          <article class="panel quick-panel" id="payments">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Fast actions</span>
+                <h2>Quick banking</h2>
+              </div>
+            </div>
+            <div class="quick-action-grid">
+              <button data-demo-alert="Transfer flow: beneficiary → validation → MFA → risk check → confirmation."><i
+                  class="fa-solid fa-paper-plane"></i><b>Transfer money</b><small>NEFT · RTGS · IMPS</small></button>
+              <button data-demo-alert="UPI payment flow will connect to the UPI API."><i
+                  class="fa-solid fa-qrcode"></i><b>Pay with UPI</b><small>Send & collect</small></button>
+              <button data-demo-alert="Bill payment service will connect to the payment gateway."><i
+                  class="fa-solid fa-receipt"></i><b>Pay bills</b><small>Utilities & more</small></button>
+              <button data-demo-alert="Card controls will connect to the card service."><i
+                  class="fa-solid fa-credit-card"></i><b>Manage card</b><small>Block · Limits · PIN</small></button>
+            </div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid two-one">
+          <article class="panel" id="statements">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Recent activity</span>
+                <h2>Transactions</h2>
+              </div><button class="text-btn">Full statement <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="transaction-table">
+              <div class="table-row table-head"><span>Transaction</span><span>Date</span><span>Status</span><span
+                  class="amount-col">Amount</span></div>
+              <div class="table-row"><span><b>UPI · Grocery Mart</b><small>•••• 4812</small></span><span>03 Sep
+                  2026</span><span><em class="badge success">Completed</em></span><strong class="amount debit">− ₹
+                  2,840</strong></div>
+              <div class="table-row"><span><b>Salary Credit</b><small>Employer transfer</small></span><span>01 Sep
+                  2026</span><span><em class="badge success">Completed</em></span><strong class="amount credit">+ ₹
+                  78,500</strong></div>
+              <div class="table-row"><span><b>NEFT · Home Loan EMI</b><small>Loan repayment</small></span><span>01 Sep
+                  2026</span><span><em class="badge success">Completed</em></span><strong class="amount debit">− ₹
+                  31,420</strong></div>
+              <div class="table-row"><span><b>Card · Online Store</b><small>Credit card</small></span><span>30 Aug
+                  2026</span><span><em class="badge warning">Processing</em></span><strong class="amount debit">− ₹
+                  4,280</strong></div>
+            </div>
+          </article>
+          <article class="panel" id="loans">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Credit</span>
+                <h2>Loan snapshot</h2>
+              </div>
+            </div>
+            <div class="loan-card">
+              <div class="loan-icon"><i class="fa-solid fa-house"></i></div>
+              <div><b>Home Loan</b><span>Outstanding ₹ 18.2L</span></div><strong>₹31,420<small>next EMI · 05
+                  Sep</small></strong>
+            </div>
+            <div class="progress-line"><span style="width:68%"></span></div>
+            <div class="progress-meta"><span>68% of tenure completed</span><b>48 / 70 EMIs</b></div>
+            <div class="loan-card">
+              <div class="loan-icon auto"><i class="fa-solid fa-car"></i></div>
+              <div><b>Auto Loan</b><span>Outstanding ₹ 3.25L</span></div><strong>₹12,840<small>next EMI · 10
+                  Sep</small></strong>
+            </div>
+          </article>
+        </section>
+
+        <section class="insight-banner" id="profile">
+          <div class="insight-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div><span class="eyebrow">ALLER Insight</span>
+            <h3>Your banking is on track.</h3>
+            <p>Review your card limit and recurring payment settings from one place.</p>
+          </div><button class="btn btn-light"
+            data-demo-alert="Personalised insight details will be generated by the analytics service.">Review
+            insight</button>
+        </section>
+
+      </div>
+    </main>
+  </div>
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" data-chat-toggle aria-label="Open ALLER Assist"><i
+        class="fa-solid fa-message"></i><span>ALLER Assist</span></button>
+    <div class="chatbot-window">
+      <div class="chat-header">
+        <div><span class="chat-avatar"><i class="fa-solid fa-sparkles"></i></span><span><b>ALLER Assist</b><small>Secure
+              banking assistant</small></span></div><button data-chat-close><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="chat-body" data-chat-body>
+        <div class="bot-message">Hello! I can guide you through banking services, requests and this dashboard. What
+          would you like to do?</div>
+      </div>
+      <div class="quick-prompts"><button data-chat-prompt="Show my pending tasks">Pending tasks</button><button
+          data-chat-prompt="Help with a service request">Service request</button><button
+          data-chat-prompt="Explain security">Security</button></div>
+      <form class="chat-input" data-chat-form><input data-chat-input placeholder="Ask ALLER Assist..."
+          autocomplete="off"><button><i class="fa-solid fa-paper-plane"></i></button></form>
+    </div>
+  </div>
+  <!-- <script src="js/app.js"></script> -->
+  <script src="js/auth.js"></script>
+  <!-- <script src=""></script> -->
+</body>
+
+</html>

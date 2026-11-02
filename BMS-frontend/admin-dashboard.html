@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLER BANK | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="../css/module-enhancements.css">
+</head>
+
+<body class="dashboard-page" data-dashboard="admin">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><a class="brand" href="index.html"><span
+            class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button class="sidebar-close"
+          data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="workspace-label"><span>Workspace</span><b>ADMIN</b></div>
+      <nav class="sidebar-nav">
+
+        <a class="nav-item active" href="#overview"><i class="fa-solid fa-grid-2"></i><span>System Overview</span></a>
+        <div class="nav-group-label">Platform</div>
+        <a class="nav-item" href="admin/roles.html"><i class="fa-solid fa-users-gear"></i><span>Users & Roles</span></a>
+        <a class="nav-item" href="admin/branches.html"><i class="fa-solid fa-code-branch"></i><span>Branches</span></a>
+        <a class="nav-item" href="#config"><i class="fa-solid fa-sliders"></i><span>Master Configuration</span></a>
+        <a class="nav-item" href="#integrations"><i class="fa-solid fa-plug"></i><span>Integrations</span></a>
+        <div class="nav-group-label">Security</div>
+        <a class="nav-item" href="admin/security.html"><i class="fa-solid fa-shield-halved"></i><span>Security
+            Centre</span></a>
+        <a class="nav-item" href="admin/audit.html"><i class="fa-solid fa-fingerprint"></i><span>Audit Trail</span></a>
+        <a class="nav-item" href="admin/compliance.html"><i
+            class="fa-solid fa-scale-balanced"></i><span>Compliance</span></a>
+        <div class="nav-group-label">Monitoring</div>
+        <a class="nav-item" href="admin/service-health.html"><i class="fa-solid fa-heart-pulse"></i><span>Service
+            Health</span></a>
+        <a class="nav-item" href="admin/reports.html"><i class="fa-solid fa-chart-column"></i><span>Enterprise
+            Reports</span></a>
+
+      </nav>
+      <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+        <div><b>Secure session</b><span>MFA protected</span></div>
+      </div>
+      <button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+        <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+            placeholder="Search banking services, customers, transactions..."></div>
+        <div class="header-actions">
+          <button class="icon-btn" data-demo-alert="No new alerts in this demo." aria-label="Notifications"><i
+              class="fa-regular fa-bell"></i><em>3</em></button>
+          <button class="icon-btn" data-demo-alert="Help centre will connect to the service API." aria-label="Help"><i
+              class="fa-regular fa-circle-question"></i></button>
+          <div class="user-menu">
+            <div class="avatar">AD</div>
+            <div><b>Admin</b><span>Super Administrator</span></div><i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-welcome">
+          <div><span class="eyebrow">Thursday · 03 September 2026</span>
+            <h1>Good afternoon, Admin.</h1>
+            <p>Monitor platform health, security, users, integrations and enterprise controls.</p>
+          </div>
+          <div class="status-chip"><span class="status-dot"></span> All core services operational</div>
+        </div>
+
+
+        <section id="overview" class="stats-grid">
+          <article class="metric-card primary">
+            <div class="metric-top"><span>Transaction throughput</span><i class="fa-solid fa-bolt"></i></div>
+            <strong>3,284 TPS</strong><small><i class="fa-solid fa-circle-check"></i> Peak target 3,000+ TPS</small>
+            <div class="sparkline">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>System availability</span><i class="fa-solid fa-heart-pulse"></i></div>
+            <strong>99.997%</strong><small>Current service window</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Active users</span><i class="fa-solid fa-users"></i></div>
+            <strong>284,612</strong><small>+3.7% this month</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Security alerts</span><i class="fa-solid fa-shield-halved"></i></div>
+            <strong>03</strong><small>1 requires review</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid two-one">
+          <article class="panel" id="health">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Platform monitoring</span>
+                <h2>Service health</h2>
+              </div><span class="status-chip"><span class="status-dot"></span> Live</span>
+            </div>
+            <div class="service-list">
+              <div><span><i class="fa-solid fa-server"></i><b>Core Banking Services</b></span><em
+                  class="health-ok">Operational</em></div>
+              <div><span><i class="fa-solid fa-money-bill-transfer"></i><b>Payments Gateway</b></span><em
+                  class="health-ok">Operational</em></div>
+              <div><span><i class="fa-solid fa-user-shield"></i><b>Authentication / MFA</b></span><em
+                  class="health-ok">Operational</em></div>
+              <div><span><i class="fa-solid fa-triangle-exclamation"></i><b>Fraud Monitoring</b></span><em
+                  class="health-warn">Degraded</em></div>
+            </div>
+          </article>
+          <article class="panel" id="security">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Security centre</span>
+                <h2>Risk posture</h2>
+              </div>
+            </div>
+            <div class="risk-score">
+              <div class="score-ring"><strong>92</strong><span>/100</span></div>
+              <div><b>Strong posture</b><small>3 alerts · 0 critical</small></div>
+            </div>
+            <div class="risk-items"><span><i class="fa-solid fa-check"></i> MFA coverage 100%</span><span><i
+                  class="fa-solid fa-check"></i> Audit pipeline healthy</span><span><i class="fa-solid fa-check"></i>
+                Encryption services healthy</span></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid three-col" id="users">
+          <article class="admin-card"><span class="admin-card-icon"><i class="fa-solid fa-user-lock"></i></span>
+            <div><span>Role assignments</span><strong>18,421</strong><small>12 changes today</small></div><button
+              data-demo-alert="RBAC administration screen opened.">Manage</button>
+          </article>
+          <article class="admin-card"><span class="admin-card-icon"><i class="fa-solid fa-code-branch"></i></span>
+            <div><span>Active branches</span><strong>428</strong><small>All reporting healthy</small></div><button
+              data-demo-alert="Branch management screen opened.">Manage</button>
+          </article>
+          <article class="admin-card"><span class="admin-card-icon"><i class="fa-solid fa-plug"></i></span>
+            <div><span>External integrations</span><strong>14</strong><small>1 degraded</small></div><button
+              data-demo-alert="Integration monitoring screen opened.">Monitor</button>
+          </article>
+        </section>
+
+        <section class="panel" id="audit">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Immutable controls</span>
+              <h2>Recent audit events</h2>
+            </div><button class="text-btn">Open audit explorer <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <div class="transaction-table">
+            <div class="table-row table-head">
+              <span>Event</span><span>Actor</span><span>Channel</span><span>Status</span><span>Time</span></div>
+            <div class="table-row"><span><b>ROLE_PERMISSION_CHANGED</b><small>Role: Branch
+                  Manager</small></span><span>ADM-0021</span><span>Admin Console</span><span><em
+                  class="badge success">Logged</em></span><strong>14:41:22</strong></div>
+            <div class="table-row"><span><b>MASTER_CONFIG_UPDATED</b><small>Transaction limit
+                  policy</small></span><span>ADM-0012</span><span>Admin Console</span><span><em
+                  class="badge success">Logged</em></span><strong>14:38:04</strong></div>
+            <div class="table-row"><span><b>SECURITY_ALERT_ACK</b><small>Velocity threshold
+                  alert</small></span><span>SOC-0007</span><span>Security Centre</span><span><em
+                  class="badge info">Reviewed</em></span><strong>14:29:51</strong></div>
+          </div>
+        </section>
+
+        <section class="panel" id="integrations">
+          <div class="panel-heading">
+            <div><span class="eyebrow">External ecosystem</span>
+              <h2>Integration status</h2>
+            </div>
+          </div>
+          <div class="integration-grid"><span><i class="fa-solid fa-building-columns"></i><b>RBI / Settlement</b><em
+                class="health-ok">Healthy</em></span><span><i class="fa-solid fa-mobile-screen"></i><b>NPCI / UPI</b><em
+                class="health-ok">Healthy</em></span><span><i class="fa-solid fa-credit-card"></i><b>Card Network</b><em
+                class="health-ok">Healthy</em></span><span><i class="fa-solid fa-file-shield"></i><b>KYC / AML</b><em
+                class="health-warn">Degraded</em></span></div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" data-chat-toggle aria-label="Open ALLER Assist"><i
+        class="fa-solid fa-message"></i><span>ALLER Assist</span></button>
+    <div class="chatbot-window">
+      <div class="chat-header">
+        <div><span class="chat-avatar"><i class="fa-solid fa-sparkles"></i></span><span><b>ALLER Assist</b><small>Secure
+              banking assistant</small></span></div><button data-chat-close><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="chat-body" data-chat-body>
+        <div class="bot-message">Hello! I can guide you through banking services, requests and this dashboard. What
+          would you like to do?</div>
+      </div>
+      <div class="quick-prompts"><button data-chat-prompt="Show my pending tasks">Pending tasks</button><button
+          data-chat-prompt="Help with a service request">Service request</button><button
+          data-chat-prompt="Explain security">Security</button></div>
+      <form class="chat-input" data-chat-form><input data-chat-input placeholder="Ask ALLER Assist..."
+          autocomplete="off"><button><i class="fa-solid fa-paper-plane"></i></button></form>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

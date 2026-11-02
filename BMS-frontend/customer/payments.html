@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALLER BANK | Payments & Transfers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/module-enhancements.css">
+    <link rel="stylesheet" href="../css/accounts.css">
+</head>
+
+<body class="dashboard-page module-screen" data-dashboard="customer">
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><a class="brand" href="../index.html"><span
+                        class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button
+                    class="sidebar-close" data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="workspace-label"><span>Workspace</span><b>CUSTOMER BANKING</b></div>
+            <nav class="sidebar-nav"><a class="nav-item" href="../customer-dashboard.html"><i
+                        class="fa-solid fa-grid-2"></i><span>Overview</span></a><a class="nav-item"
+                    href="accounts.html"><i class="fa-solid fa-wallet"></i><span>Accounts</span></a><a
+                    class="nav-item active" href="payments.html"><i
+                        class="fa-solid fa-money-bill-transfer"></i><span>Payments & Transfers</span></a><a
+                    class="nav-item" href="loans.html"><i class="fa-solid fa-house"></i><span>Loans</span></a><a
+                    class="nav-item" href="cards.html"><i class="fa-solid fa-credit-card"></i><span>Cards</span></a><a
+                    class="nav-item" href="beneficiaries.html"><i
+                        class="fa-solid fa-users"></i><span>Beneficiaries</span></a><a class="nav-item"
+                    href="deposits.html"><i class="fa-solid fa-building-columns"></i><span>Deposits</span></a><a
+                    class="nav-item" href="fund-transfer.html"><i
+                        class="fa-solid fa-arrow-right-arrow-left"></i><span>Fund Transfer</span></a><a class="nav-item"
+                    href="transactions.html"><i class="fa-solid fa-list"></i><span>Transactions</span></a><a
+                    class="nav-item" href="kyc.html"><i class="fa-solid fa-id-card"></i><span>KYC</span></a><a
+                    class="nav-item" href="service-requests.html"><i class="fa-solid fa-headset"></i><span>Service
+                        Requests</span></a><a class="nav-item" href="statements.html"><i
+                        class="fa-solid fa-file-lines"></i><span>Statements</span></a><a class="nav-item"
+                    href="notifications.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a><a
+                    class="nav-item" href="security.html"><i class="fa-solid fa-user-gear"></i><span>Profile &
+                        Security</span></a><a class="nav-item" href="support.html"><i
+                        class="fa-solid fa-circle-question"></i><span>Support</span></a></nav>
+            <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+                <div><b>Secure session</b><span>MFA protected</span></div>
+            </div><button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign
+                out</button>
+        </aside>
+        <main class="dashboard-main">
+             <header class="dashboard-header">
+                <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+                <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+                        placeholder="Search banking services, customers, transactions..."></div>
+                <div class="header-actions"><button class="icon-btn" data-demo-alert="No new alerts in this demo."
+                        aria-label="Notifications"><i class="fa-regular fa-bell"></i><em>3</em></button><button
+                        class="icon-btn" data-demo-alert="Help centre will connect to the service API."
+                        aria-label="Help"><i class="fa-regular fa-circle-question"></i></button>
+                    <div class="user-menu" id="userMenu">
+
+                        <button class="user-menu-trigger" id="userMenuTrigger" type="button">
+                            <div class="avatar">RK</div>
+
+                            <div class="user-info">
+                                <b>Rohit</b>
+                                <span>Customer</span>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down user-chevron"></i>
+                        </button>
+
+                        <!-- Logout Dropdown -->
+                     
+                        <div class="user-dropdown" id="userDropdown">
+
+                            <!-- Profile -->
+                            <button type="button" id="profileBtn" class="dropdown-item profile-btn">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <span>Profile</span>
+
+                            </button>
+
+
+                            <!-- Logout -->
+                            <button type="button" id="logoutBtn" class="dropdown-item logout-btn">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                <span>Logout</span>
+
+                            </button>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <div class="module-heading">
+                    <div><span class="crumb">ALLER BANK / CUSTOMER BANKING / Payments & Transfers</span>
+                        <h1>Payments & Transfers</h1>
+                        <p>Manage payments, transfers and payment instructions securely.</p>
+                    </div>
+                    <div class="module-actions"><a class="btn btn-light" href="../customer-dashboard.html"><i
+                                class="fa-solid fa-arrow-left"></i> Dashboard</a></div>
+                </div>
+                <div class="module-card">
+                    <h2>Secure Payment Instruction</h2>
+                    <p>Enter the payment details. Production validation and authorization will be handled by the
+                        backend.</p>
+                    <form class="module-form">
+                        <div class="field"><label>Beneficiary</label><select>
+                                <option>Select beneficiary</option>
+                                <option>Registered Beneficiary — 4821</option>
+                            </select></div>
+                        <div class="field"><label>Amount (INR)</label><input type="number" placeholder="0.00"></div>
+                        <div class="field"><label>Transfer Type</label><select>
+                                <option>IMPS</option>
+                                <option>NEFT</option>
+                                <option>RTGS</option>
+                            </select></div>
+                        <div class="field"><label>Purpose</label><input placeholder="Payment purpose"></div>
+                        <div class="field full"><button type="button" class="btn btn-primary" data-demo-action>Continue
+                                Securely</button></div>
+                    </form>
+                </div>
+                <div class="ab-rich">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>document.querySelectorAll('[data-demo-action]').forEach(b => b.addEventListener('click', () => alert('ALLER BANK: This workflow is ready to connect to the Node.js API.')));</script>
+    <script>(function () { var data = { bar: { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], values: [42, 55, 49, 68, 61, 76] }, line: { labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], values: [42, 58, 51, 74, 69, 82] }, doughnut: { labels: ["Operational", "Attention", "Review"], values: [68, 22, 10] } }; document.querySelectorAll("[data-ab-chart]").forEach(function (c) { var t = c.dataset.abChart, d = data[t] || data.bar; new Chart(c, { type: t, data: { labels: d.labels, datasets: [{ label: "Illustrative KPI", data: d.values, borderWidth: 2, tension: .35, hoverOffset: 8 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: t === "doughnut", position: "bottom" } }, scales: t === "doughnut" ? {} : { y: { beginAtZero: true } } } }); }); })();</script>
+</body>
+
+</html>

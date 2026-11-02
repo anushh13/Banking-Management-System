@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLER BANK | Branch Manager Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body class="dashboard-page" data-dashboard="manager">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><a class="brand" href="index.html"><span class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button class="sidebar-close" data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="workspace-label"><span>Workspace</span><b>BRANCH MANAGEMENT</b></div>
+      <nav class="sidebar-nav">
+        
+<a class="nav-item active" href="branch-manager/dashboard-overview.html"><i class="fa-solid fa-grid-2"></i><span>Branch Overview</span></a>
+<div class="nav-group-label">Management</div>
+<a class="nav-item" href="branch-manager/customer-360.html"><i class="fa-solid fa-users"></i><span>Customer 360</span></a>
+<a class="nav-item" href="#approvals"><i class="fa-solid fa-check-double"></i><span>Approvals <em class="nav-count">8</em></span></a>
+<a class="nav-item" href="branch-manager/loans.html"><i class="fa-solid fa-file-invoice-dollar"></i><span>Loans & Credit</span></a>
+<div class="nav-group-label">Branch Operations</div>
+<a class="nav-item" href="#cash"><i class="fa-solid fa-money-bill-wave"></i><span>Cash & Vault</span></a>
+<a class="nav-item" href="branch-manager/reconciliation.html"><i class="fa-solid fa-scale-balanced"></i><span>Reconciliation</span></a>
+<a class="nav-item" href="branch-manager/staff.html"><i class="fa-solid fa-user-group"></i><span>Staff Performance</span></a>
+<div class="nav-group-label">Reports</div>
+<a class="nav-item" href="branch-manager/reports.html"><i class="fa-solid fa-chart-column"></i><span>Branch Reports</span></a>
+<a class="nav-item" href="#compliance"><i class="fa-solid fa-shield-halved"></i><span>Compliance</span></a>
+
+      </nav>
+      <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i><div><b>Secure session</b><span>MFA protected</span></div></div>
+      <button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+        <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input placeholder="Search banking services, customers, transactions..."></div>
+        <div class="header-actions">
+          <button class="icon-btn" data-demo-alert="No new alerts in this demo." aria-label="Notifications"><i class="fa-regular fa-bell"></i><em>3</em></button>
+          <button class="icon-btn" data-demo-alert="Help centre will connect to the service API." aria-label="Help"><i class="fa-regular fa-circle-question"></i></button>
+          <div class="user-menu"><div class="avatar">RM</div><div><b>R. Mehta</b><span>Branch Manager</span></div><i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-welcome">
+          <div><span class="eyebrow">Thursday · 03 September 2026</span><h1>Good afternoon, R. Mehta.</h1><p>A live view of branch performance, approvals, cash and operational controls.</p></div>
+          <div class="status-chip"><span class="status-dot"></span> All core services operational</div>
+        </div>
+
+        
+<section id="overview" class="stats-grid">
+  <article class="metric-card primary"><div class="metric-top"><span>Branch business</span><i class="fa-solid fa-building-columns"></i></div><strong>₹ 184.6 Cr</strong><small><i class="fa-solid fa-arrow-trend-up"></i> +6.2% MTD</small><div class="sparkline"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></article>
+  <article class="metric-card"><div class="metric-top"><span>Today's transactions</span><i class="fa-solid fa-arrow-right-arrow-left"></i></div><strong>2,846</strong><small>₹ 12.4 Cr value</small></article>
+  <article class="metric-card"><div class="metric-top"><span>Approvals pending</span><i class="fa-solid fa-check-double"></i></div><strong>08</strong><small>3 high value</small></article>
+  <article class="metric-card"><div class="metric-top"><span>Reconciliation</span><i class="fa-solid fa-scale-balanced"></i></div><strong>99.94%</strong><small>2 exceptions open</small></article>
+</section>
+
+<section class="dashboard-grid two-one">
+  <article class="panel" id="approvals">
+    <div class="panel-heading"><div><span class="eyebrow">Maker-checker</span><h2>Approval queue</h2></div><button class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button></div>
+    <div class="approval-list">
+      <div class="approval-row"><div class="approval-icon danger"><i class="fa-solid fa-money-bill-transfer"></i></div><div><b>High-value NEFT</b><span>TXN-902840 · CUST-10472</span></div><strong>₹ 12,00,000</strong><button class="approve-btn" data-demo-alert="Approval screen opened. Production workflow must enforce maker-checker segregation.">Review</button></div>
+      <div class="approval-row"><div class="approval-icon warning"><i class="fa-solid fa-user-plus"></i></div><div><b>Account activation</b><span>APP-28731 · Savings</span></div><strong>New customer</strong><button class="approve-btn" data-demo-alert="Account activation approval screen opened.">Review</button></div>
+      <div class="approval-row"><div class="approval-icon info"><i class="fa-solid fa-sliders"></i></div><div><b>Transaction limit change</b><span>CUST-10772 · Card</span></div><strong>₹ 2,50,000</strong><button class="approve-btn" data-demo-alert="Limit approval screen opened.">Review</button></div>
+    </div>
+  </article>
+  <article class="panel" id="cash">
+    <div class="panel-heading"><div><span class="eyebrow">Vault & cash</span><h2>Branch position</h2></div></div>
+    <div class="cash-total"><span>Vault cash</span><strong>₹ 48.20 L</strong><small>Within configured limit</small></div>
+    <div class="progress-line"><span style="width:64%"></span></div><div class="progress-meta"><span>64% of vault limit</span><b>₹75L</b></div>
+    <div class="mini-stat-grid"><div><span>Teller cash</span><b>₹ 18.4L</b></div><div><span>Cash in transit</span><b>₹ 8.2L</b></div></div>
+  </article>
+</section>
+
+<section class="dashboard-grid two-one">
+  <article class="panel" id="staff">
+    <div class="panel-heading"><div><span class="eyebrow">People</span><h2>Staff performance</h2></div><button class="text-btn">View team <i class="fa-solid fa-arrow-right"></i></button></div>
+    <div class="staff-row"><div class="avatar">AK</div><div><b>Anil Kumar</b><span>Teller · 42 transactions</span></div><strong>98%</strong></div>
+    <div class="staff-row"><div class="avatar">SR</div><div><b>Sneha Rao</b><span>CSR · 18 requests</span></div><strong>96%</strong></div>
+    <div class="staff-row"><div class="avatar">MP</div><div><b>Manoj Patil</b><span>Operations · 31 tasks</span></div><strong>94%</strong></div>
+  </article>
+  <article class="panel" id="reconciliation">
+    <div class="panel-heading"><div><span class="eyebrow">EOD controls</span><h2>Reconciliation</h2></div></div>
+    <div class="recon-status"><span class="status-dot"></span><div><b>Branch reconciliation</b><small>Last run 14:32 · 99.94% matched</small></div><strong>Healthy</strong></div>
+    <div class="exception-box"><i class="fa-solid fa-triangle-exclamation"></i><div><b>2 exceptions</b><span>Awaiting operations review</span></div><button class="row-action">Open</button></div>
+  </article>
+</section>
+
+<section class="panel" id="reports">
+  <div class="panel-heading"><div><span class="eyebrow">Management information</span><h2>Branch performance</h2></div><button class="filter-btn"><i class="fa-regular fa-calendar"></i> September 2026</button></div>
+  <div class="chart-placeholder"><div class="chart-grid"></div><div class="chart-bars"><i style="height:38%"></i><i style="height:56%"></i><i style="height:44%"></i><i style="height:72%"></i><i style="height:61%"></i><i style="height:84%"></i><i style="height:78%"></i><i style="height:92%"></i><i style="height:75%"></i><i style="height:88%"></i><i style="height:96%"></i><i style="height:86%"></i></div></div>
+  <div class="chart-legend"><span><i></i> Transaction volume</span><span>Target: ₹ 15 Cr / day</span></div>
+</section>
+
+      </div>
+    </main>
+  </div>
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" data-chat-toggle aria-label="Open ALLER Assist"><i class="fa-solid fa-message"></i><span>ALLER Assist</span></button>
+    <div class="chatbot-window">
+      <div class="chat-header"><div><span class="chat-avatar"><i class="fa-solid fa-sparkles"></i></span><span><b>ALLER Assist</b><small>Secure banking assistant</small></span></div><button data-chat-close><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="chat-body" data-chat-body><div class="bot-message">Hello! I can guide you through banking services, requests and this dashboard. What would you like to do?</div></div>
+      <div class="quick-prompts"><button data-chat-prompt="Show my pending tasks">Pending tasks</button><button data-chat-prompt="Help with a service request">Service request</button><button data-chat-prompt="Explain security">Security</button></div>
+      <form class="chat-input" data-chat-form><input data-chat-input placeholder="Ask ALLER Assist..." autocomplete="off"><button><i class="fa-solid fa-paper-plane"></i></button></form>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

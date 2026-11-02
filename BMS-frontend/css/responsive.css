@@ -1,0 +1,17 @@
+/* Phase 2 extension: visual language intentionally inherits Phase 1 common.css. */
+
+
+/* ALLER BANK — readability */
+p,
+li,
+label,
+input,
+select,
+textarea,
+button,
+.nav-link,
+.menu-item,
+.sidebar-link {
+    font-size: max(15px, 1em);
+    line-height: 1.55;
+}

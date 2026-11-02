@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ALLER BANK | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/module-enhancements.css">
+  <link rel="stylesheet" href="../css/phase2.css">
+</head>
+
+<body class="dashboard-page">
+  <div class="page-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><a class="brand brand-light" href="../index.html"><span
+            class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a></div>
+      <nav class="sidebar-nav">
+        <a class="nav-item active" href="dashboard.html"><i class="fa-solid fa-grid-2"></i>Dashboard</a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-wallet"></i>Accounts</a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-arrow-right-arrow-left"></i>Transactions</a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-file-lines"></i>Services</a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-chart-line"></i>Reports</a>
+        <a class="nav-item" href="#"><i class="fa-solid fa-shield-halved"></i>Security</a>
+      </nav>
+      <button class="btn btn-glass btn-full" data-logout>Sign out</button>
+    </aside>
+    <main class="page-main">
+      <header class="page-header">
+        <div><span class="eyebrow">ALLER BANK</span>
+          <h1>Admin Dashboard</h1>
+          <p>Control enterprise users, security, configuration and platform operations.</p>
+        </div>
+        <div class="action-row"><button class="btn btn-primary" data-chat-toggle><i class="fa-solid fa-sparkles"></i>
+            ALLER Assist</button></div>
+      </header>
+  </div>
+  <script src="../js/api.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/chatbot.js"></script>
+  <script>if (window.allerAuth) allerAuth.requireRole("admin"); async function loadModuleData() { try { const r = await allerApi.health(); alert(r.message) } catch (e) { alert("API not available. Start the backend first.") } }</script>
+</body>
+
+</html>

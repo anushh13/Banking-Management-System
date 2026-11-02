@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALLER BANK | Account Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/module-enhancements.css">
+</head>
+
+<body class="dashboard-page module-screen" data-dashboard="staff">
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><a class="brand" href="../index.html"><span
+                        class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button
+                    class="sidebar-close" data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="workspace-label"><span>Workspace</span><b>STAFF & EMPLOYEE BANKING</b></div>
+            <nav class="sidebar-nav"><a class="nav-item" href="../employee-dashboard.html"><i
+                        class="fa-solid fa-grid-2"></i><span>Overview</span></a><a class="nav-item"
+                    href="customers.html"><i class="fa-solid fa-users"></i><span>Customer Management</span></a><a
+                    class="nav-item" href="customer-360.html"><i class="fa-solid fa-user-group"></i><span>Customer
+                        360</span></a><a class="nav-item" href="account-opening.html"><i
+                        class="fa-solid fa-folder-plus"></i><span>Account Opening</span></a><a class="nav-item active"
+                    href="accounts.html"><i class="fa-solid fa-wallet"></i><span>Account Services</span></a><a
+                    class="nav-item" href="kyc.html"><i class="fa-solid fa-id-card"></i><span>KYC
+                        Verification</span></a><a class="nav-item" href="transactions.html"><i
+                        class="fa-solid fa-list"></i><span>Transactions</span></a><a class="nav-item"
+                    href="beneficiaries.html"><i class="fa-solid fa-users-gear"></i><span>Beneficiary
+                        Management</span></a><a class="nav-item" href="loans.html"><i
+                        class="fa-solid fa-house"></i><span>Loan Processing</span></a><a class="nav-item"
+                    href="cards.html"><i class="fa-solid fa-credit-card"></i><span>Card Services</span></a><a
+                    class="nav-item" href="service-requests.html"><i class="fa-solid fa-headset"></i><span>Service
+                        Requests</span></a><a class="nav-item" href="reconciliation.html"><i
+                        class="fa-solid fa-arrows-rotate"></i><span>Reconciliation</span></a><a class="nav-item"
+                    href="reports.html"><i class="fa-solid fa-chart-column"></i><span>Reports</span></a><a
+                    class="nav-item" href="compliance.html"><i
+                        class="fa-solid fa-scale-balanced"></i><span>Compliance</span></a><a class="nav-item"
+                    href="notifications.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a><a
+                    class="nav-item" href="support.html"><i
+                        class="fa-solid fa-circle-question"></i><span>Support</span></a></nav>
+            <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+                <div><b>Secure session</b><span>MFA protected</span></div>
+            </div><button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign
+                out</button>
+        </aside>
+        <main class="dashboard-main">
+            <header class="dashboard-header"><button class="mobile-sidebar-btn" data-sidebar-open><i
+                        class="fa-solid fa-bars"></i></button>
+                <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+                        placeholder="Search banking services, customers, transactions..."></div>
+                <div class="header-actions"><button class="icon-btn" data-demo-alert="No new alerts in this demo."
+                        aria-label="Notifications"><i class="fa-regular fa-bell"></i><em>3</em></button><button
+                        class="icon-btn" data-demo-alert="Help centre will connect to the service API."
+                        aria-label="Help"><i class="fa-regular fa-circle-question"></i></button>
+                    <div class="user-menu">
+                        <div class="avatar">AB</div>
+                        <div><b>ALLER User</b><span>Staff</span></div><i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <div class="module-heading">
+                    <div><span class="crumb">ALLER BANK / STAFF & EMPLOYEE BANKING / Account Services</span>
+                        <h1>Account Services</h1>
+                        <p>View balances, account details, statements and account servicing options.</p>
+                    </div>
+                    <div class="module-actions"><a class="btn btn-light" href="../employee-dashboard.html"><i
+                                class="fa-solid fa-arrow-left"></i> Dashboard</a></div>
+                </div>
+                <section class="ab-section ab-fade">
+                    <div class="ab-section-header">
+                        <!-- <div>
+                            <h2 class="ab-section-title">Key Information</h2>
+                            <p class="ab-section-desc">SRS-aligned information for the staff workspace.</p>
+                        </div> -->
+                    </div>
+                    <div class="ab-module-grid">
+                        <article class="ab-info-card ab-fade ab-delay-1">
+                            <div class="ab-kicker">Accounts in Queue</div>
+                            <div class="ab-value">126</div>
+                            <div class="ab-meta">Customer/account cases assigned</div><span class="ab-status success"
+                                style="margin-top:12px">Operational</span>
+                        </article>
+                        <article class="ab-info-card ab-fade ab-delay-2">
+                            <div class="ab-kicker">Pending Changes</div>
+                            <div class="ab-value">8</div>
+                            <div class="ab-meta">Maintenance actions awaiting processing</div><span
+                                class="ab-status warning" style="margin-top:12px">Attention</span>
+                        </article>
+                        <article class="ab-info-card ab-fade ab-delay-3">
+                            <div class="ab-kicker">Restrictions</div>
+                            <div class="ab-value">3</div>
+                            <div class="ab-meta">Freeze/hold/dormancy review</div><span class="ab-status warning"
+                                style="margin-top:12px">Attention</span>
+                        </article>
+                    </div>
+                </section>
+                <section class="ab-section ab-fade">
+                    <div class="ab-section-header">
+                        <div>
+                            <h2 class="ab-section-title">Module Details</h2>
+                            <p class="ab-section-desc">Core capabilities and controls relevant to this banking function.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ab-detail-grid">
+                        <article class="ab-panel">
+                            <ul class="ab-list">
+                                <li><span><strong>Account Control</strong></span><span>Savings, Current, FD and RD
+                                        support opening, maintenance, nominee, limits, dormancy and closure
+                                        controls.</span></li>
+                                <li><span><strong>Operations</strong></span><span>Process eligible branch transactions
+                                        and customer services within assigned role and branch scope.</span></li>
+                                <li><span><strong>Maker-checker</strong></span><span>Restricted or sensitive actions are
+                                        submitted for authorized approval rather than self-approved.</span></li>
+                            </ul>
+                        </article>
+                        <article class="ab-panel">
+                            <h3 style="margin-top:0">Control Snapshot</h3>
+                            <ul class="ab-list">
+                                <li><span><strong>Work queue</strong><br><small>Assigned</small></span><span
+                                        class="ab-status success">Active</span></li>
+                                <li><span><strong>Exception queue</strong><br><small>Controlled</small></span><span
+                                        class="ab-status warning">Review</span></li>
+                                <li><span><strong>Audit trail</strong><br><small>Enabled</small></span><span
+                                        class="ab-status warning">Traceable</span></li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="ab-section ab-fade">
+                    <div class="ab-alert"><strong>Control note:</strong> Sensitive and financial operations are subject
+                        to role-based access, authentication, authorization, maker-checker controls where applicable and
+                        audit traceability.</div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>document.querySelectorAll('[data-demo-action]').forEach(b => b.addEventListener('click', () => alert('ALLER BANK: This workflow is ready to connect to the Node.js API.')));</script>
+    <script>(function () { var data = { bar: { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], values: [42, 55, 49, 68, 61, 76] }, line: { labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], values: [42, 58, 51, 74, 69, 82] }, doughnut: { labels: ["Operational", "Attention", "Review"], values: [68, 22, 10] } }; document.querySelectorAll("[data-ab-chart]").forEach(function (c) { var t = c.dataset.abChart, d = data[t] || data.bar; new Chart(c, { type: t, data: { labels: d.labels, datasets: [{ label: "Illustrative KPI", data: d.values, borderWidth: 2, tension: .35, hoverOffset: 8 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: t === "doughnut", position: "bottom" } }, scales: t === "doughnut" ? {} : { y: { beginAtZero: true } } } }); }); })();</script>
+</body>
+
+</html>

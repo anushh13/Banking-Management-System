@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALLER BANK | Accounts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/module-enhancements.css">
+    <link rel="stylesheet" href="../css/accounts.css">
+    <!-- <style>
+        /* =========================================
+   USER MENU
+========================================= */
+
+        .user-menu {
+            position: relative;
+        }
+
+
+        /* User clickable area */
+
+        .user-menu-trigger {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            border: none;
+            background: transparent;
+
+            padding: 6px 10px;
+
+            border-radius: 12px;
+
+            cursor: pointer;
+
+            color: inherit;
+
+            transition: all 0.25s ease;
+        }
+
+        .user-menu-trigger:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+
+        /* User information */
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .user-info b {
+            font-size: 14px;
+        }
+
+        .user-info span {
+            font-size: 12px;
+            opacity: 0.65;
+        }
+
+
+        /* Arrow */
+
+        .user-chevron {
+            font-size: 12px;
+            margin-left: 4px;
+
+            transition: transform 0.25s ease;
+        }
+
+
+        /* Rotate arrow when opened */
+
+        .user-menu.active .user-chevron {
+            transform: rotate(180deg);
+        }
+
+
+        /* =========================================
+   DROPDOWN
+========================================= */
+
+        .user-dropdown {
+            position: absolute;
+
+            top: calc(100% + 8px);
+            right: 0;
+
+            width: 170px;
+
+            padding: 7px;
+
+            background: #ffffff;
+
+            border: 1px solid rgba(0, 0, 0, 0.08);
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.12);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateY(-8px);
+
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                visibility 0.2s ease;
+
+            z-index: 9999;
+        }
+
+
+        /* Open dropdown */
+
+        .user-menu.active .user-dropdown {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+        .logout-btn {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding-top: 13px;
+            margin-top: 4px;
+            border: none;
+            border-radius: 0 0 9px 9px;
+            border-top: 1px solid #eeeeee;  
+            background: transparent;
+
+            color: #d32f2f;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        .logout-btn:hover {
+            background: #fff1f1;
+
+            color: #b71c1c;
+        }
+
+        .logout-btn i {
+            width: 18px;
+            text-align: center;
+        }
+
+        .dropdown-item {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 11px 12px;
+
+            border: none;
+            border-radius: 9px;
+
+            background: transparent;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item i {
+            width: 18px;
+            text-align: center;
+            font-size: 15px;
+        }
+        .profile-btn {
+    color: #263238;
+}
+.profile-btn:hover {
+    background: #f1f6ff;
+    color: #0b57d0;
+
+    transform: translateX(3px);
+}
+    </style> -->
+</head>
+
+<body class="dashboard-page module-screen" data-dashboard="customer">
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><a class="brand" href="../index.html"><span
+                        class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button
+                    class="sidebar-close" data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="workspace-label"><span>Workspace</span><b>CUSTOMER BANKING</b></div>
+            <nav class="sidebar-nav"><a class="nav-item" href="../customer-dashboard.html"><i
+                        class="fa-solid fa-grid-2"></i><span>Overview</span></a><a class="nav-item active"
+                    href="accounts.html"><i class="fa-solid fa-wallet"></i><span>Accounts</span></a><a class="nav-item"
+                    href="payments.html"><i class="fa-solid fa-money-bill-transfer"></i><span>Payments &
+                        Transfers</span></a><a class="nav-item" href="loans.html"><i
+                        class="fa-solid fa-house"></i><span>Loans</span></a><a class="nav-item" href="cards.html"><i
+                        class="fa-solid fa-credit-card"></i><span>Cards</span></a><a class="nav-item"
+                    href="beneficiaries.html"><i class="fa-solid fa-users"></i><span>Beneficiaries</span></a><a
+                    class="nav-item" href="deposits.html"><i
+                        class="fa-solid fa-building-columns"></i><span>Deposits</span></a><a class="nav-item"
+                    href="fund-transfer.html"><i class="fa-solid fa-arrow-right-arrow-left"></i><span>Fund
+                        Transfer</span></a><a class="nav-item" href="transactions.html"><i
+                        class="fa-solid fa-list"></i><span>Transactions</span></a><a class="nav-item" href="kyc.html"><i
+                        class="fa-solid fa-id-card"></i><span>KYC</span></a><a class="nav-item"
+                    href="service-requests.html"><i class="fa-solid fa-headset"></i><span>Service Requests</span></a><a
+                    class="nav-item" href="statements.html"><i
+                        class="fa-solid fa-file-lines"></i><span>Statements</span></a><a class="nav-item"
+                    href="notifications.html"><i class="fa-solid fa-bell"></i><span>Notifications</span></a><a
+                    class="nav-item" href="security.html"><i class="fa-solid fa-user-gear"></i><span>Profile &
+                        Security</span></a><a class="nav-item" href="support.html"><i
+                        class="fa-solid fa-circle-question"></i><span>Support</span></a></nav>
+            <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+                <div><b>Secure session</b><span>MFA protected</span></div>
+            </div><button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign
+                out</button>
+        </aside>
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+                <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+                        placeholder="Search banking services, customers, transactions..."></div>
+                <div class="header-actions"><button class="icon-btn" data-demo-alert="No new alerts in this demo."
+                        aria-label="Notifications"><i class="fa-regular fa-bell"></i><em>3</em></button><button
+                        class="icon-btn" data-demo-alert="Help centre will connect to the service API."
+                        aria-label="Help"><i class="fa-regular fa-circle-question"></i></button>
+                    <div class="user-menu" id="userMenu">
+
+                        <button class="user-menu-trigger" id="userMenuTrigger" type="button">
+                            <div class="avatar">RK</div>
+
+                            <div class="user-info">
+                                <b>Rohit</b>
+                                <span>Customer</span>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down user-chevron"></i>
+                        </button>
+
+                        <!-- Logout Dropdown -->
+                     
+                        <div class="user-dropdown" id="userDropdown">
+
+                            <!-- Profile -->
+                            <button type="button" id="profileBtn" class="dropdown-item profile-btn">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <span>Profile</span>
+
+                            </button>
+
+
+                            <!-- Logout -->
+                            <button type="button" id="logoutBtn" class="dropdown-item logout-btn">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                <span>Logout</span>
+
+                            </button>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </header>
+            <div class="dashboard-content">
+                <div class="module-heading">
+                    <div><span class="crumb">ALLER BANK / CUSTOMER BANKING / Accounts</span>
+                        <h1>Accounts</h1>
+                        <p>View balances, account details, statements and account servicing options.</p>
+                    </div>
+                    <div class="module-actions"><a class="btn btn-light" href="../customer-dashboard.html"><i
+                                class="fa-solid fa-arrow-left"></i> Dashboard</a></div>
+                </div>
+                <section class="ab-section ab-fade">
+                    <div class="ab-section-header">
+                    </div>
+                    <div class="ab-module-grid">
+                        <article class="ab-info-card ab-fade ab-delay-1">
+                            <div class="ab-kicker">Active Accounts</div>
+                            <div class="ab-value">3</div>
+                            <div class="ab-meta">Savings, FD and RD relationship</div><span class="ab-status success"
+                                style="margin-top:12px">Operational</span>
+                        </article>
+                        <article class="ab-info-card ab-fade ab-delay-2">
+                            <div class="ab-kicker">Available Balance</div>
+                            <div class="ab-value">₹ 2.18 L</div>
+                            <div class="ab-meta">Usable balance after holds</div><span class="ab-status success"
+                                style="margin-top:12px">Operational</span>
+                        </article>
+                        <article class="ab-info-card ab-fade ab-delay-3">
+                            <div class="ab-kicker">Restrictions</div>
+                            <div class="ab-value">0</div>
+                            <div class="ab-meta">No active restriction on primary account</div><span
+                                class="ab-status success" style="margin-top:12px">Operational</span>
+                        </article>
+                    </div>
+                </section>
+                <section class="ab-section ab-fade">
+                    <div class="ab-section-header">
+                        <div>
+                            <h2 class="ab-section-title">Module Details</h2>
+                            <p class="ab-section-desc">Core capabilities and controls relevant to this banking function.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="ab-detail-grid">
+                        <article class="ab-panel">
+                            <ul class="ab-list">
+                                <li><span><strong>Account Control</strong></span><span>Savings, Current, FD and RD
+                                        support opening, maintenance, nominee, limits, dormancy and closure
+                                        controls.</span></li>
+                                <li><span><strong>Lifecycle</strong></span><span>Account/product lifecycle is controlled
+                                        from opening and verification through maintenance, restriction and
+                                        closure.</span></li>
+                                <li><span><strong>Security</strong></span><span>Sensitive profile and financial actions
+                                        require authentication, appropriate limits and audit traceability.</span></li>
+                            </ul>
+                        </article>
+                        <article class="ab-panel">
+                            <h3 style="margin-top:0">Control Snapshot</h3>
+                            <ul class="ab-list">
+                                <li><span><strong>Account/Service record</strong><br><small>Current</small></span><span
+                                        class="ab-status success">Available</span></li>
+                                <li><span><strong>Risk status</strong><br><small>Monitored</small></span><span
+                                        class="ab-status warning">Controlled</span></li>
+                                <li><span><strong>Customer access</strong><br><small>Authenticated</small></span><span
+                                        class="ab-status warning">Secure</span></li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                <section class="ab-section ab-fade">
+                    <div class="ab-alert"><strong>Control note:</strong> Sensitive and financial operations are subject
+                        to role-based access, authentication, authorization, maker-checker controls where applicable and
+                        audit traceability.</div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../js/app.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>document.querySelectorAll('[data-demo-action]').forEach(b => b.addEventListener('click', () => alert('ALLER BANK: This workflow is ready to connect to the Node.js API.')));</script>
+    <script>(function () { var data = { bar: { labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], values: [42, 55, 49, 68, 61, 76] }, line: { labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], values: [42, 58, 51, 74, 69, 82] }, doughnut: { labels: ["Operational", "Attention", "Review"], values: [68, 22, 10] } }; document.querySelectorAll("[data-ab-chart]").forEach(function (c) { var t = c.dataset.abChart, d = data[t] || data.bar; new Chart(c, { type: t, data: { labels: d.labels, datasets: [{ label: "Illustrative KPI", data: d.values, borderWidth: 2, tension: .35, hoverOffset: 8 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: t === "doughnut", position: "bottom" } }, scales: t === "doughnut" ? {} : { y: { beginAtZero: true } } } }); }); })();</script>
+</body>
+
+</html>

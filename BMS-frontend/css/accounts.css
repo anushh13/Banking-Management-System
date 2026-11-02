@@ -1,0 +1,185 @@
+.user-menu {
+    position: relative;
+}
+
+
+/* User clickable area */
+
+.user-menu-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border: none;
+    background: transparent;
+
+    padding: 6px 10px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: inherit;
+
+    transition: all 0.25s ease;
+}
+
+.user-menu-trigger:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+
+/* User information */
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-info b {
+    font-size: 14px;
+}
+
+.user-info span {
+    font-size: 12px;
+    opacity: 0.65;
+}
+
+
+/* Arrow */
+
+.user-chevron {
+    font-size: 12px;
+    margin-left: 4px;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Rotate arrow when opened */
+
+.user-menu.active .user-chevron {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.user-dropdown {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 170px;
+
+    padding: 7px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+
+    z-index: 9999;
+}
+
+
+/* Open dropdown */
+
+.user-menu.active .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-btn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-top: 13px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 0 0 9px 9px;
+    border-top: 1px solid #eeeeee;
+    background: transparent;
+
+    color: #d32f2f;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #fff1f1;
+
+    color: #b71c1c;
+}
+
+.logout-btn i {
+    width: 18px;
+    text-align: center;
+}
+
+.dropdown-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item i {
+    width: 18px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.profile-btn {
+    color: #263238;
+}
+
+.profile-btn:hover {
+    background: #f1f6ff;
+    color: #0b57d0;
+
+    transform: translateX(3px);
+}

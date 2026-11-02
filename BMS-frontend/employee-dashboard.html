@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLER BANK | Staff Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body class="dashboard-page" data-dashboard="employee">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><a class="brand" href="index.html"><span
+            class="brand-mark">A</span><span><b>ALLER</b><small>BANK</small></span></a><button class="sidebar-close"
+          data-sidebar-close><i class="fa-solid fa-xmark"></i></button></div>
+      <div class="workspace-label"><span>Workspace</span><b>BRANCH OPERATIONS</b></div>
+      <nav class="sidebar-nav">
+
+        <a class="nav-item active" href="#overview"><i class="fa-solid fa-grid-2"></i><span>Operations
+            Overview</span></a>
+        <div class="nav-group-label">Customers</div>
+        <a class="nav-item" href="staff/customer-360.html"><i class="fa-solid fa-users"></i><span>Customer
+            360</span></a>
+        <a class="nav-item" href="staff/accounts.html"><i class="fa-solid fa-wallet"></i><span>Account
+            Services</span></a>
+        <a class="nav-item" href="staff/kyc.html"><i class="fa-solid fa-id-card"></i><span>KYC / Onboarding</span></a>
+        <div class="nav-group-label">Transactions</div>
+        <a class="nav-item" href="staff/transactions.html"><i
+            class="fa-solid fa-money-bill-transfer"></i><span>Transactions</span></a>
+        <a class="nav-item" href="staff/beneficiaries.html"><i
+            class="fa-solid fa-users-gear"></i><span>Beneficiaries</span></a>
+        <a class="nav-item" href="staff/service-requests.html"><i class="fa-solid fa-headset"></i><span>Service
+            Requests</span></a>
+        <div class="nav-group-label">Operations</div>
+        <a class="nav-item" href="#tasks"><i class="fa-solid fa-list-check"></i><span>My Tasks <em
+              class="nav-count">12</em></span></a>
+        <a class="nav-item" href="#attendance"><i class="fa-solid fa-calendar-check"></i><span>Attendance</span></a>
+
+      </nav>
+      <div class="sidebar-security"><i class="fa-solid fa-shield-halved"></i>
+        <div><b>Secure session</b><span>MFA protected</span></div>
+      </div>
+      <button class="sidebar-logout" data-logout><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <button class="mobile-sidebar-btn" data-sidebar-open><i class="fa-solid fa-bars"></i></button>
+        <div class="header-search"><i class="fa-solid fa-magnifying-glass"></i><input
+            placeholder="Search banking services, customers, transactions..."></div>
+        <div class="header-actions">
+          <button class="icon-btn" data-demo-alert="No new alerts in this demo." aria-label="Notifications"><i
+              class="fa-regular fa-bell"></i><em>3</em></button>
+          <button class="icon-btn" data-demo-alert="Help centre will connect to the service API." aria-label="Help"><i
+              class="fa-regular fa-circle-question"></i></button>
+          <div class="user-menu">
+            <div class="avatar">AS</div>
+            <div><b>Anil</b><span>Branch Employee · CSR</span></div><i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+      </header>
+
+      <div class="dashboard-content">
+        <div class="dashboard-welcome">
+          <div><span class="eyebrow">Thursday · 03 September 2026</span>
+            <h1>Good afternoon, Anil.</h1>
+            <p>Manage your queue, serve customers and keep branch operations moving.</p>
+          </div>
+          <div class="status-chip"><span class="status-dot"></span> All core services operational</div>
+        </div>
+
+
+        <section id="overview" class="stats-grid">
+          <article class="metric-card primary">
+            <div class="metric-top"><span>Tasks due today</span><i class="fa-solid fa-list-check"></i></div>
+            <strong>12</strong><small>4 high priority</small>
+            <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Customers served</span><i class="fa-solid fa-users"></i></div>
+            <strong>48</strong><small>Today · +12% vs avg.</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Transactions processed</span><i
+                class="fa-solid fa-arrow-right-arrow-left"></i></div><strong>126</strong><small>₹ 34.8L value</small>
+          </article>
+          <article class="metric-card">
+            <div class="metric-top"><span>Service SLA</span><i class="fa-solid fa-stopwatch"></i></div>
+            <strong>96.8%</strong><small>Within target</small>
+          </article>
+        </section>
+
+        <section class="dashboard-grid two-one">
+          <article class="panel" id="tasks">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Work queue</span>
+                <h2>Priority tasks</h2>
+              </div><button class="text-btn">Open queue <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="task-list">
+              <div class="task-row"><span class="priority high"></span>
+                <div><b>KYC review · CUST-10482</b><small>Document mismatch · assigned 8 min ago</small></div><em
+                  class="badge danger">High</em><button class="row-action"
+                  data-demo-alert="KYC review workspace opened.">Review</button>
+              </div>
+              <div class="task-row"><span class="priority medium"></span>
+                <div><b>Account opening · APP-28731</b><small>Maker verification required</small></div><em
+                  class="badge warning">Pending</em><button class="row-action"
+                  data-demo-alert="Account opening verification workspace opened.">Review</button>
+              </div>
+              <div class="task-row"><span class="priority low"></span>
+                <div><b>Service request · SR-72811</b><small>Cheque book request · 1 day old</small></div><em
+                  class="badge info">Normal</em><button class="row-action"
+                  data-demo-alert="Service request workspace opened.">Review</button>
+              </div>
+            </div>
+          </article>
+          <article class="panel" id="customers">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Branch queue</span>
+                <h2>Customer service</h2>
+              </div>
+            </div>
+            <div class="queue-stat"><span>Waiting customers</span><strong>07</strong><small>Avg. wait 08:42</small>
+            </div>
+            <div class="queue-stat"><span>Open requests</span><strong>19</strong><small>3 nearing SLA</small></div>
+            <div class="queue-stat"><span>KYC exceptions</span><strong>04</strong><small>2 need action</small></div>
+          </article>
+        </section>
+
+        <section class="panel" id="transactions">
+          <div class="panel-heading">
+            <div><span class="eyebrow">Branch activity</span>
+              <h2>Recent transaction processing</h2>
+            </div><button class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button>
+          </div>
+          <div class="transaction-table staff-table">
+            <div class="table-row table-head">
+              <span>Reference</span><span>Channel</span><span>Type</span><span>Status</span><span
+                class="amount-col">Amount</span></div>
+            <div class="table-row"><span><b>TXN-902841</b><small>CUST-10882</small></span><span>Branch
+                Teller</span><span>Cash Deposit</span><span><em class="badge success">Posted</em></span><strong
+                class="amount credit">+ ₹ 85,000</strong></div>
+            <div class="table-row"><span><b>TXN-902840</b><small>CUST-10472</small></span><span>NEFT</span><span>Fund
+                Transfer</span><span><em class="badge warning">Checker</em></span><strong class="amount debit">− ₹
+                1,20,000</strong></div>
+            <div class="table-row"><span><b>TXN-902839</b><small>CUST-10991</small></span><span>UPI</span><span>Merchant
+                Payment</span><span><em class="badge success">Posted</em></span><strong class="amount debit">− ₹
+                3,450</strong></div>
+          </div>
+        </section>
+
+        <section class="workflow-card" id="kyc">
+          <div class="workflow-head">
+            <div><span class="eyebrow">Account opening</span>
+              <h2>Today's onboarding pipeline</h2>
+            </div><span class="status-chip"><span class="status-dot"></span> Live queue</span>
+          </div>
+          <div class="workflow-steps">
+            <div class="done"><i class="fa-solid fa-user"></i><b>Submitted</b><span>18</span></div>
+            <div class="done"><i class="fa-solid fa-id-card"></i><b>KYC</b><span>14</span></div>
+            <div class="current"><i class="fa-solid fa-user-check"></i><b>Maker</b><span>08</span></div>
+            <div><i class="fa-solid fa-check-double"></i><b>Checker</b><span>05</span></div>
+            <div><i class="fa-solid fa-circle-check"></i><b>Activated</b><span>31</span></div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" data-chat-toggle aria-label="Open ALLER Assist"><i
+        class="fa-solid fa-message"></i><span>ALLER Assist</span></button>
+    <div class="chatbot-window">
+      <div class="chat-header">
+        <div><span class="chat-avatar"><i class="fa-solid fa-sparkles"></i></span><span><b>ALLER Assist</b><small>Secure
+              banking assistant</small></span></div><button data-chat-close><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="chat-body" data-chat-body>
+        <div class="bot-message">Hello! I can guide you through banking services, requests and this dashboard. What
+          would you like to do?</div>
+      </div>
+      <div class="quick-prompts"><button data-chat-prompt="Show my pending tasks">Pending tasks</button><button
+          data-chat-prompt="Help with a service request">Service request</button><button
+          data-chat-prompt="Explain security">Security</button></div>
+      <form class="chat-input" data-chat-form><input data-chat-input placeholder="Ask ALLER Assist..."
+          autocomplete="off"><button><i class="fa-solid fa-paper-plane"></i></button></form>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
